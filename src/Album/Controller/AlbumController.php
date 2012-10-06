@@ -2,12 +2,11 @@
 // module/Album/src/Album/Controller/AlbumController.php
 namespace Album\Controller;
 
-use Zend\Mvc\Controller\AbstractController;
+use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
 
 class AlbumController extends AbstractActionController
 {
-    
     protected $albumTable;
     
     public function getAlbumTable()
