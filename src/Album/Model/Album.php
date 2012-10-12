@@ -2,7 +2,7 @@
 // module/Album/src/Album/Model/Album.php
 namespace Album\Model;
 
-use Zend\InputFilter\Factory as InputFilter;
+use Zend\InputFilter\Factory as InputFactory;
 use Zend\InputFilter\InputFilter;
 use Zend\InputFilter\InputFilterAwareInterface;
 use Zend\InputFilter\InputFilterInterface;
@@ -72,7 +72,7 @@ class Album implements InputFilterAwareInterface
                 ),
                 'validators' => array(
                     array(
-                        'name' => 'StringLenght',
+                        'name' => 'StringLength',
                         'options' => array(
                             'encoding' => 'UTF-8',
                             'min' => 1,
@@ -85,6 +85,6 @@ class Album implements InputFilterAwareInterface
             $this->inputFilter = $inputFilter;
         }
         
-        return $this->$inputFilter;
+        return $this->inputFilter;
     }
 }
